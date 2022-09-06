@@ -15,12 +15,9 @@ pipeline {
 
     stage('build') {
       steps {
-        bat 'mvn package'
+        sh 'mvn compile package'
       }
     }
 
-  }
-  environment {
-    maven = 'maven3'
   }
 }
